@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #236499;
+}
+
+/* Navbar Background */
+.navbar {
+    background-color: white !important;
+}
+
+/* Button Primary Style */
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* General Text Primary */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Navbar Links in Primary Color */
+.navbar-nav .nav-link {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+    text-decoration: none !important; /* Removes underline */
+    border: none !important; /* Removes any borders */
+}
+
+/* Active State (optional: can bold or underline) */
+.navbar-nav .nav-link.active {
+    font-weight: 600;
+    text-decoration: underline !important; /* Keep underline for active link */
+    background-color: transparent !important; /* Remove background for active link */
+}
+
+/* Remove underline or border from navbar links on hover */
+.navbar-nav .nav-item .nav-link:hover {
+    text-decoration: none !important;
+    border: none !important;
+}
+
+/* Optional: Remove any border or background color when active */
+.navbar-nav .nav-item .nav-link.active {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+/* Dropdown Toggle (arrows, remove border) */
+.navbar-nav .nav-item .nav-link.dropdown-toggle {
+    border: none !important;
+}
+/* Ensure Topbar is visible */
+.topbar {
+    background-color: #f8f9fa; /* Light color */
+    padding: 10px 0; /* Add padding to ensure content isn't too close to the edges */
+    z-index: 9999; /* Make sure it sits on top of other content */
+    position: relative; /* Ensure the positioning is correct */
+}
+
+/* Make sure the content inside topbar is centered and responsive */
+.topbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar .text-muted {
+    color: #6c757d !important; /* Ensure text color is appropriate */
+}
+
+/* Ensure the icons have consistent spacing */
+.topbar .fas {
+    margin-right: 8px; /* Add space between icons and text */
+}
+
+/* Optional: Adjust padding for better spacing */
+.navbar {
+    padding-top: 70px; /* Adjust navbar position if needed */
+}
+
+/* TEAM MEMBER SECTION STYLES */
+.team-member {
+    margin-bottom: 50px;
+    transition: all 0.3s ease;
+    text-align: center; /* Center content */
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member .img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%; /* Make image wrapper circular */
+    width: 150px; /* Set fixed width */
+    height: 150px; /* Set fixed height */
+    margin: 0 auto 20px auto; /* Center and add space below */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop image to fill circle without distortion */
+    border-radius: 50%; /* Ensure image follows circular shape */
+    transition: all 0.5s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+.team-member .member-info {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.team-member h4 {
+    color: #212529;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.team-member .position {
+    display: block;
+    color: var(--bs-primary);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.team-member .bio {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.expertise-tag {
+    display: inline-block;
+    background-color: #e9f0fd;
+    color: var(--bs-primary);
+    border-radius: 30px;
+    padding: 4px 12px;
+    margin: 4px 2px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* SECTION TITLE UNDERLINE STYLE */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--bs-primary);
+}
+
+/* PAGE HEADER BACKGROUND IMAGE WITH OVERLAY */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                url(img/team-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
